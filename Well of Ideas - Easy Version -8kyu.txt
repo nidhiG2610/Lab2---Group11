@@ -1,0 +1,6 @@
+//  https://www.codewars.com/kata/57f222ce69e09c3630000212/solutions/javascript/me/best_practice
+
+function well(x){
+      var occurance = x.filter( function(x){  return (x !== "bad");  }).length;
+     return ( occurance>2? "I smell a series!" : occurance<1 ? "Fail!" : "Publish!");
+}
