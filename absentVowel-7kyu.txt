@@ -1,0 +1,26 @@
+//  https://www.codewars.com/kata/56414fdc6488ee99db00002c/solutions/javascript
+
+function absentVowel(str1){
+  var vowelsArray = ["a","e","i","o","u"];
+  var vowelIndex;
+  var vowelIndexArray = [];
+  
+  for(var x = 0; x < str1.length ; x++)
+  {
+ 
+    if (vowelsArray.indexOf(str1[x]) !== -1)
+    {
+      vowelIndex= vowelsArray.indexOf(str1[x]);         // stores the index of vowels in vowelsArray array
+      vowelIndexArray.push(vowelsArray[vowelIndex]);    // add vowels to vowelIndexArray array
+    }
+  
+  } 
+  
+  for(var v = 0; v < vowelsArray.length ; v++)
+  {  
+    if (!(vowelIndexArray.includes(vowelsArray[v])))    // check the missing vowel
+    {
+    return v;
+    }
+  }
+}
